@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Weather App</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="weather-app-wrap">
+        <div class="weather-app">
+          <form id="search-form" class="mb-3">
+            <div class="row">
+              <div class="col-8">
+                <input
+                  type="search"
+                  placeholder="Enter city"
+                  class="form-control form-control shadow"
+                  id="city-input"
+                  autocomplete="off"
+                />
+              </div>
+              <div class="col-3">
+                <input
+                  type="submit"
+                  class="btn-search"
+                  id="button"
+                  value="Search"
+                />
+              </div>
+            </div>
+          </form>
+          <div class="overview">
+            <h1 id="city">-</h1>
+            <ul>
+              <li>Last updated: <span id="date"></span></li>
+              <li id="description">Clear</li>
+            </ul>
+            <div class="row">
+              <div class="col-6">
+                <div class="d-flex weather-temperature">
+                  <img src="" alt="cloudy" id="icon" class="float-left" />
+                  <div class="float-left">
+                    <strong id="temperature"></strong>
+                    <span class="units">°F</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6">
+                <ul>
+                  <li>Humidity <span id="humidity"></span>%</li>
+                  <li>Wind <span id="wind"></span> mph</li>
+                </ul>
+              </div>
+              <div class="weather-forecast" id="forecast"></div>
+            </div>
+          </div>
+        </div>
+        <small>
+          <a href="https://github.com/marcimds/Week-7" target="_blank"
+            >Open-source code , by Marcia Santos</a
+          >
+          by Marcia Santos
+        </small>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
